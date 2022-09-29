@@ -9,7 +9,12 @@ const banner5 = "/Images/banner5.webp";
 
 export default function BannerSlider() {
     return (
-        <Box w={"100vw"} padding={"10px 2px"} border={"1px solid gray"}>
+        <Box 
+        margin={"auto"}
+        width={"99%"} 
+        padding={"10px 2px"} 
+        borderBottom={"1px solid gray"} 
+        mb={"50px"}>
             <HeroSlider
                 height={"380px"}
                 autoplay
