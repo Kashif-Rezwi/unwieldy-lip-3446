@@ -3,23 +3,23 @@ import styles from "./Styles.module.css"
 
 import "./Category.css"
 import { Text } from "@chakra-ui/react"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { TriangleDownIcon } from "@chakra-ui/icons"
+import { AppContext } from "../AppContext/AppContext"
 
 export const Category = () => {
-
-    const [boolean, setBoolean] = useState(true)
+    const {boolean, setBoolean} = useContext(AppContext)
 
     return (
-        <div className="kids">
+        <div className="products">
             <button onClick={() => setBoolean(!boolean)}><Text fontSize="xs" as={"b"} color={"#4A5568"} mr={"50px"} ml={"10px"}>
                 Category <span><TriangleDownIcon boxSize={2}/></span>
                 </Text>
             
             </button>
-            <div className={boolean? styles.subMenu1 : styles.subMenu2  }>
+            <div className={boolean? styles.subMenu1 : styles.subMenu2  } >
                 <ul>
-                    <div className="categories">
+                    <div className="categories" style={{borderLeft: "1px solid gray"}}>
 
                         <h3>MEN</h3>
                         <p>Watches</p>
@@ -94,7 +94,7 @@ export const Category = () => {
                         <p>Top Selling Smart Watches</p>
 
                     </div>
-                    <div className="categories">
+                    <div className="categories" style={{borderRight: "1px solid gray"}}>
 
                         <h3>MOBILES & TABS</h3>
                         <p>Bluetooth Earphone</p>

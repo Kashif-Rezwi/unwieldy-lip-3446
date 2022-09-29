@@ -16,8 +16,9 @@ import {
     DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button
 } from '@chakra-ui/react'
 import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons'
-import { useRef } from "react"
+import { useContext, useRef, useState } from "react"
 import { Category } from "./Category";
+import { AppContext } from "../AppContext/AppContext";
 
 
 const Links = [
@@ -32,7 +33,13 @@ export const Navbar = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
+    const { setBoolean } = useContext(AppContext)
 
+    if(isOpen){
+        setBoolean(true)
+    }
+
+    console.log(isOpen)
     return (
         <div style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px" }}>
 
