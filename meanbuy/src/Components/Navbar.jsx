@@ -25,7 +25,7 @@ const Links = [
     { path: "/flash_sale", title: "Flash Sale" },
     { path: "/best_deal", title: "Best Deal" },
     { path: "/shop_by_brand", title: "Shop By Brand" },
-    { path: "/trening", title: "Trening" },
+    { path: "/trending", title: "Trending" },
     { path: "/new_arrivals", title: "New Arrivals" },
 ]
 
@@ -35,18 +35,20 @@ export const Navbar = () => {
     const btnRef = useRef()
     const { setBoolean } = useContext(AppContext)
 
-    if(isOpen){
+    if (isOpen) {
         setBoolean(true)
     }
 
     // console.log(isOpen)
     return (
-        <div style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"}}>
+        <div style={{ boxShadow: "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px" }}>
 
             <VStack p={"10px"}>
                 <Flex w="full" p={"0px 10px"}>
                     <Flex>
-                        <Image cursor={"pointer"} w={"190px"} mr={"20px"} src="/Images/baselogo.png" alt="logo" />
+                        <Link to={"/"}>
+                            <Image cursor={"pointer"} w={"190px"} mr={"20px"} src="/Images/baselogo.png" alt="logo" />
+                        </Link>
                         <Spacer />
                         <Box p='4'>
                             <Center overflow={"hidden"} w={"350px"} h={"35px"} bg="#edf2f7" borderRadius={"4px"}>

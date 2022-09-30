@@ -25,9 +25,9 @@ export const Home = () => {
         <div>
             <Navbar />
             <BannerSlider />
-             <MultiItemCarousel title={"Trending"} />
-             <MultiItemCarousel title={"Women"} />
-             <MultiItemCarousel title={"Men"} />
+             <MultiItemCarousel title={"Trending"} Scroll={5} boolean={true} />
+             <MultiItemCarousel title={"Women"} Scroll={5} boolean={true} />
+             <MultiItemCarousel title={"Men"} Scroll={5} boolean={true} />
              <Footer/>
         </div>
     )
