@@ -1,10 +1,9 @@
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { Box, Text } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { Products } from './Products';
+import { Box, Image, Text } from '@chakra-ui/react';
 
 
 const data = [
@@ -47,24 +46,16 @@ const Prev = (props) => {
   };
 
 
-  export const MultiItemCarousel = ({title, Scroll, boolean=false}) => {
+  export const ImageSlider = ({Scroll, width}) => {
     return (
-      <Box m={"30px"} w={"95%"} position={"relative"}>
-
-            {boolean && <Box zIndex={"10"} bg={"white"} p={"0px 5px 0px 0px"} position={"absolute"} top={"-22px"} left={"0px"}>
-                <Text as={"b"} fontSize={"2xl"}>{title}</Text>
-            </Box>}
-
-            {boolean && <Box zIndex={"10"} bg={"white"} p={"2px 10px 0px 5px"} position={"absolute"} top={"-20px"} right={"0px"}>
-                <Link to={"/trending"} >
-                   <Text fontSize={"xl"} color={"gray"}>see more</Text>
-                </Link>
-            </Box>}
+      <Box m={"auto"} w={width} position={"relative"}>
 
         <Slider prevArrow={<Prev/>} nextArrow={<Next/>} slidesToShow={Scroll} slidesToScroll={Scroll} >
           {
           data.map((item) => (
-            <Products image={item.image} boolean={boolean}/>
+            <Box p={"10px"}>
+              <Image src={item.image} alt="demo"/>
+            </Box>
           ))
           }
         </Slider>

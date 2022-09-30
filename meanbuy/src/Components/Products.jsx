@@ -1,8 +1,9 @@
 import { Box, HStack, Spacer, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-export const Products = ({ image }) => {
+export const Products = ({ image, boolean=false }) => {
+    
     return (
-        <VStack p={"30px 0px"} borderTop={"1px solid black"} >
+        <VStack p={"30px 0px"} borderTop={boolean? "1px solid gray" : null} >
 
             <Box w={"230px"} mb={"10px"}>
                 <img src={image} width={"100%"} alt="demo" />

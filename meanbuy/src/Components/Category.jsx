@@ -19,7 +19,7 @@ export const Category = () => {
             </button>
             <div className={boolean? styles.subMenu1 : styles.subMenu2  } >
                 <ul>
-                    <div className="categories" style={{borderLeft: "1px solid gray"}}>
+                    <div className="categories" style={{borderLeft:"2px solid #CBD5E0"}} >
 
                         <h3>MEN</h3>
                         <p>Watches</p>
@@ -94,7 +94,7 @@ export const Category = () => {
                         <p>Top Selling Smart Watches</p>
 
                     </div>
-                    <div className="categories" style={{borderRight: "1px solid gray"}}>
+                    <div className="categories" style={{borderRight: "2px solid #CBD5E0"}}>
 
                         <h3>MOBILES & TABS</h3>
                         <p>Bluetooth Earphone</p>

@@ -1,6 +1,14 @@
 .App {
   text-align: center;
-  box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
+/* feedback component */
+.star{
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+input[type="radio"] {
+  display: none;
+}
+/* feedback component */
